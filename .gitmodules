@@ -1,0 +1,3 @@
+[submodule "sdk/N32G031_CodeLib"]
+	path = sdk/N32G031_CodeLib
+	url = https://github.com/axfnull/N32G031_CodeLib.git
