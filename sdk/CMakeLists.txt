@@ -24,14 +24,14 @@ set(TARGET_LIB_DIRECTORIES
         )
 
 if (NOT TARGET_STARTUP_ASM)
-    set(TARGET_STARTUP_ASM ${N32G031_CMSIS_PATH}/device/startup_n32g031.s)
-    set(TARGET_STARTUP_ASM ${N32G031_CMSIS_PATH}/device/startup_n32g031.s PARENT_SCOPE)
+    message(FATAL_ERROR "Must set TARGET_STARTUP_ASM to locate startup asm")
 endif ()
 message(STATUS "Use startup asm: " ${TARGET_STARTUP_ASM})
 
 if (NOT TARGET_LD_SCRIPT)
     message(FATAL_ERROR "Must set TARGET_LD_SCRIPT to locate ld script")
 endif ()
+message(STATUS "Use LD script: " ${TARGET_LD_SCRIPT})
 
 add_library(N32G031_SDK STATIC ${TARGET_C_SOURCES} ${TARGET_STARTUP_ASM})
 
